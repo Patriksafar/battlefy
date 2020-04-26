@@ -29,8 +29,6 @@ const theme = createMuiTheme({
 });
 
 export const App = () => {
-  console.log(theme);
-
   return (
     <ThemeProvider theme={theme}>
       <Navigation />

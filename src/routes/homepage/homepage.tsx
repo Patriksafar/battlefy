@@ -10,6 +10,7 @@ import {
   CardMedia,
   CardContent,
   CardActions,
+  Grid,
 } from "@material-ui/core";
 import { Header } from "../../components/header";
 import { paths } from "../paths";
@@ -27,6 +28,44 @@ type Props = RouteComponentProps;
 // eslint-disable-next-line no-empty-pattern
 export const Homepage = ({}: Props) => {
   const classes = useStyles();
+  const tournaments = [
+    { title: "FortniteNight 1" },
+    { title: "FortniteNight 2" },
+    { title: "FortniteNight 3" },
+  ];
+
+  tournaments.map((item) => console.log(item.title));
+
+  const TournamentCard = () => {
+    return (
+      <Card className={classes.root}>
+        <CardActionArea>
+          <CardMedia
+            className={classes.media}
+            image="https://www.letemsvetemapplem.eu/wp-content/uploads/2018/09/Fortnite.jpg"
+            title="Contemplative Reptile"
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h6" component="h2">
+              Fortnite #1
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p">
+              Je tu první turnaj ve hře Fortnite. Vstup do turnaje zdarma.
+            </Typography>
+            <Typography color="textSecondary" variant="overline">
+              12. 3. 2020
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+        <CardActions>
+          <Button size="small" color="primary">
+            Připojit
+          </Button>
+        </CardActions>
+      </Card>
+    );
+  };
+
   return (
     <div>
       <Header
@@ -48,31 +87,13 @@ export const Homepage = ({}: Props) => {
       </Header>
       <Container>
         <Typography>Turnaje</Typography>
-        <Card className={classes.root}>
-          <CardActionArea>
-            <CardMedia
-              className={classes.media}
-              image="/static/images/cards/contemplative-reptile.jpg"
-              title="Contemplative Reptile"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h6" component="h2">
-                Fortnite #1
-              </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
-                Je tu první turnaj ve hře Fortnite. Vstup do turnaje zdarma.
-              </Typography>
-              <Typography color="textSecondary" variant="overline">
-                12. 3. 2020
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions>
-            <Button size="small" color="primary">
-              Připojit
-            </Button>
-          </CardActions>
-        </Card>
+        <Grid container spacing={3}>
+          {tournaments.map((index, item) => (
+            <Grid item key={index.title}>
+              <TournamentCard />
+            </Grid>
+          ))}
+        </Grid>
       </Container>
     </div>
   );
