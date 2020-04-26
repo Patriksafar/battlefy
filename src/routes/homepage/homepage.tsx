@@ -54,7 +54,7 @@ export const Homepage = ({}: Props) => {
       </Header>
       <Container className={classes.container}>
         <Typography variant="h5" gutterBottom>
-          Turnaje
+          Nadcházející turnaje
         </Typography>
         <Grid container spacing={3}>
           {tournaments.map((item) => (

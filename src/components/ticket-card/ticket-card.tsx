@@ -54,7 +54,9 @@ export const TicketCard = ({ title, gameTag }: Props) => {
           />
           <CardContent>
             <div>
-              <Chip label={gameTag} size="small" color="secondary" />
+              <Typography color="textSecondary" variant="caption" gutterBottom>
+                {gameTag}
+              </Typography>
             </div>
 
             <Typography
@@ -65,17 +67,29 @@ export const TicketCard = ({ title, gameTag }: Props) => {
             >
               {title}
             </Typography>
-            <Grid container spacing={2}>
+            <Grid container spacing={1}>
               <Grid item>
                 <Grid container spacing={1} alignItems="center">
-                  <DateRangeIcon color="inherit" fontSize="small" />
-                  <Typography variant="caption">St, 16 Kvě</Typography>
+                  <Grid item>
+                    <DateRangeIcon color="inherit" fontSize="small" />
+                  </Grid>
+                  <Grid item>
+                    <Typography variant="caption" color="textSecondary">
+                      St, 16 Kvě
+                    </Typography>
+                  </Grid>
                 </Grid>
               </Grid>
               <Grid item>
                 <Grid container spacing={1} alignItems="center">
-                  <ScheduleIcon color="inherit" fontSize="small" />
-                  <Typography variant="caption">12:30</Typography>
+                  <Grid item>
+                    <ScheduleIcon color="inherit" fontSize="small" />
+                  </Grid>
+                  <Grid item>
+                    <Typography variant="caption" color="textSecondary">
+                      12:30
+                    </Typography>
+                  </Grid>
                 </Grid>
               </Grid>
             </Grid>

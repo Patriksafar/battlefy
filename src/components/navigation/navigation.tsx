@@ -9,6 +9,7 @@ import {
 import { Link } from "@reach/router";
 import { paths } from "../../routes/paths";
 // import classes from "*.module.css";
+import PersonOutlineSharpIcon from "@material-ui/icons/PersonOutlineSharp";
 
 import * as classes from "./navigation.styles";
 
@@ -31,8 +32,10 @@ export const Navigation = () => {
             </Link>
           </MenuItem>
         </div>
-        <Button color="inherit">Přihlásit</Button>
-        <Button color="inherit">Registrovat</Button>
+        <Button color="inherit">
+          <PersonOutlineSharpIcon fontSize="default" />
+        </Button>
+        <Button color="inherit">Donate</Button>
       </Toolbar>
     </AppBar>
   );
