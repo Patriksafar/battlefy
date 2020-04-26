@@ -41,7 +41,7 @@ let theme = createMuiTheme({
 theme = responsiveFontSizes(theme);
 
 export const App = () => {
-  const basepath = widnow.location.host + window.location.pathname
+  const basepath = window.location.host + window.location.pathname
   
   return (
     <ThemeProvider theme={theme}>
