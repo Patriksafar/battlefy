@@ -41,10 +41,12 @@ let theme = createMuiTheme({
 theme = responsiveFontSizes(theme);
 
 export const App = () => {
+  const basepath = widnow.location.host + window.location.pathname
+  
   return (
     <ThemeProvider theme={theme}>
       <Navigation />
-      <Router>
+      <Router basepath={basepath}>
         <Login path={paths.login} />
         <Register path={paths.register} />
         <Homepage default path={paths.index} />
