@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e781321553521585ecddc598f0b8f214",
+    "revision": "e99999d3e3c8e71bdf5a8f700285e13e",
     "url": "/battlefy/index.html"
   },
   {
-    "revision": "5a7fef50af192d5e2f3b",
+    "revision": "89ea163f8690da8544f1",
     "url": "/battlefy/static/css/main.8d3fe20a.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/battlefy/static/js/2.fcbed09d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5a7fef50af192d5e2f3b",
-    "url": "/battlefy/static/js/main.dcc948f7.chunk.js"
+    "revision": "89ea163f8690da8544f1",
+    "url": "/battlefy/static/js/main.e52391ed.chunk.js"
   },
   {
     "revision": "f4f06e506122fa974d2f",
