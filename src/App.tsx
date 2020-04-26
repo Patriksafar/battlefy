@@ -4,12 +4,16 @@ import { Router } from "@reach/router";
 import { Profile } from "./routes/profile";
 import { Login, Register } from "./routes/auth";
 import { Navigation } from "./components";
-import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import {
+  ThemeProvider,
+  createMuiTheme,
+  responsiveFontSizes,
+} from "@material-ui/core/styles";
 
 import { red, amber } from "@material-ui/core/colors";
 import { paths } from "./routes/paths";
 
-const theme = createMuiTheme({
+let theme = createMuiTheme({
   palette: {
     primary: {
       main: red[600],
@@ -28,8 +32,13 @@ const theme = createMuiTheme({
       fontSize: "40px",
       fontWeight: 600,
     },
+    h5: {
+      fontWeight: 800,
+    },
   },
 });
+
+theme = responsiveFontSizes(theme);
 
 export const App = () => {
   return (

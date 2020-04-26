@@ -10,16 +10,23 @@ import {
   makeStyles,
   Grid,
   Chip,
+  createMuiTheme,
 } from "@material-ui/core";
 import * as classes from "./ticket-card.styles";
 
 import DateRangeIcon from "@material-ui/icons/DateRange";
 import ScheduleIcon from "@material-ui/icons/Schedule";
 
+const theme = createMuiTheme();
 const useStyles = makeStyles({
   gridItem: {
-    maxWidth: "25%",
     width: "100%",
+    [theme.breakpoints.up("sm")]: {
+      maxWidth: "50%",
+    },
+    [theme.breakpoints.up("md")]: {
+      maxWidth: "25%",
+    },
   },
   chip: {
     padding: "4px",

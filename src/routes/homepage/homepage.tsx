@@ -1,14 +1,28 @@
 import React from "react";
 import { RouteComponentProps, navigate } from "@reach/router";
-import { Typography, Button, Container, Grid } from "@material-ui/core";
+import {
+  Typography,
+  Button,
+  Container,
+  Grid,
+  makeStyles,
+} from "@material-ui/core";
 import { Header } from "../../components/header";
 import { paths } from "../paths";
 import { TicketCard } from "../../components/ticket-card";
 import EventIcon from "@material-ui/icons/Event";
 
+const useStyles = makeStyles({
+  container: {
+    paddingTop: "48px",
+  },
+});
+
 type Props = RouteComponentProps;
 // eslint-disable-next-line no-empty-pattern
 export const Homepage = ({}: Props) => {
+  const classes = useStyles();
+
   const tournaments = [
     { title: "FortniteNight 1", game: "Fortnite" },
     { title: "FortniteNight 2", game: "Fortnite" },
@@ -38,7 +52,7 @@ export const Homepage = ({}: Props) => {
           </Button>
         </div>
       </Header>
-      <Container>
+      <Container className={classes.container}>
         <Typography variant="h5" gutterBottom>
           Turnaje
         </Typography>
