@@ -6,13 +6,16 @@ import { Login, Register } from "./routes/auth";
 import { Navigation } from "./components";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 
-import { red } from "@material-ui/core/colors";
+import { red, amber } from "@material-ui/core/colors";
 import { paths } from "./routes/paths";
 
 const theme = createMuiTheme({
   palette: {
     primary: {
       main: red[600],
+    },
+    secondary: {
+      main: amber["400"],
     },
   },
   typography: {

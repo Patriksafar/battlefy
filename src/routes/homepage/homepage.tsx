@@ -1,70 +1,21 @@
 import React from "react";
 import { RouteComponentProps, navigate } from "@reach/router";
-import {
-  Typography,
-  Button,
-  Container,
-  Card,
-  CardActionArea,
-  makeStyles,
-  CardMedia,
-  CardContent,
-  CardActions,
-  Grid,
-} from "@material-ui/core";
+import { Typography, Button, Container, Grid } from "@material-ui/core";
 import { Header } from "../../components/header";
 import { paths } from "../paths";
-
-const useStyles = makeStyles({
-  root: {
-    maxWidth: 345,
-  },
-  media: {
-    height: 140,
-  },
-});
+import { TicketCard } from "../../components/ticket-card";
+import EventIcon from "@material-ui/icons/Event";
 
 type Props = RouteComponentProps;
 // eslint-disable-next-line no-empty-pattern
 export const Homepage = ({}: Props) => {
-  const classes = useStyles();
   const tournaments = [
-    { title: "FortniteNight 1" },
-    { title: "FortniteNight 2" },
-    { title: "FortniteNight 3" },
+    { title: "FortniteNight 1", game: "Fortnite" },
+    { title: "FortniteNight 2", game: "Fortnite" },
+    { title: "FortniteNight 3", game: "Fortnite" },
+    { title: "FortniteNight 4", game: "Fortnite" },
+    { title: "FortniteNight 5", game: "Fortnite" },
   ];
-
-  tournaments.map((item) => console.log(item.title));
-
-  const TournamentCard = () => {
-    return (
-      <Card className={classes.root}>
-        <CardActionArea>
-          <CardMedia
-            className={classes.media}
-            image="https://www.letemsvetemapplem.eu/wp-content/uploads/2018/09/Fortnite.jpg"
-            title="Contemplative Reptile"
-          />
-          <CardContent>
-            <Typography gutterBottom variant="h6" component="h2">
-              Fortnite #1
-            </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-              Je tu první turnaj ve hře Fortnite. Vstup do turnaje zdarma.
-            </Typography>
-            <Typography color="textSecondary" variant="overline">
-              12. 3. 2020
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-        <CardActions>
-          <Button size="small" color="primary">
-            Připojit
-          </Button>
-        </CardActions>
-      </Card>
-    );
-  };
 
   return (
     <div>
@@ -76,22 +27,28 @@ export const Homepage = ({}: Props) => {
         <div>
           <Button
             variant="contained"
-            color="primary"
+            color="secondary"
             onClick={() => {
               navigate(paths.login);
             }}
+            size="large"
+            startIcon={<EventIcon />}
           >
             Nadcházející událost
           </Button>
         </div>
       </Header>
       <Container>
-        <Typography>Turnaje</Typography>
+        <Typography variant="h5" gutterBottom>
+          Turnaje
+        </Typography>
         <Grid container spacing={3}>
-          {tournaments.map((index, item) => (
-            <Grid item key={index.title}>
-              <TournamentCard />
-            </Grid>
+          {tournaments.map((item) => (
+            <TicketCard
+              title={item.title}
+              gameTag={item.game}
+              key={item.title}
+            />
           ))}
         </Grid>
       </Container>
