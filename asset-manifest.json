@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/battlefy/static/css/main.8d3fe20a.chunk.css",
-    "main.js": "/battlefy/static/js/main.731d46d3.chunk.js",
-    "main.js.map": "/battlefy/static/js/main.731d46d3.chunk.js.map",
+    "main.js": "/battlefy/static/js/main.dcc948f7.chunk.js",
+    "main.js.map": "/battlefy/static/js/main.dcc948f7.chunk.js.map",
     "runtime-main.js": "/battlefy/static/js/runtime-main.d85187ac.js",
     "runtime-main.js.map": "/battlefy/static/js/runtime-main.d85187ac.js.map",
-    "static/js/2.03395e0c.chunk.js": "/battlefy/static/js/2.03395e0c.chunk.js",
-    "static/js/2.03395e0c.chunk.js.map": "/battlefy/static/js/2.03395e0c.chunk.js.map",
+    "static/js/2.fcbed09d.chunk.js": "/battlefy/static/js/2.fcbed09d.chunk.js",
+    "static/js/2.fcbed09d.chunk.js.map": "/battlefy/static/js/2.fcbed09d.chunk.js.map",
     "index.html": "/battlefy/index.html",
-    "precache-manifest.f8c933f7e61d8dbfc9efe10599fd0bd6.js": "/battlefy/precache-manifest.f8c933f7e61d8dbfc9efe10599fd0bd6.js",
+    "precache-manifest.002aa5ce91a6e2298b2f7ccbc95c5076.js": "/battlefy/precache-manifest.002aa5ce91a6e2298b2f7ccbc95c5076.js",
     "service-worker.js": "/battlefy/service-worker.js",
     "static/css/main.8d3fe20a.chunk.css.map": "/battlefy/static/css/main.8d3fe20a.chunk.css.map",
-    "static/js/2.03395e0c.chunk.js.LICENSE.txt": "/battlefy/static/js/2.03395e0c.chunk.js.LICENSE.txt"
+    "static/js/2.fcbed09d.chunk.js.LICENSE.txt": "/battlefy/static/js/2.fcbed09d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.d85187ac.js",
-    "static/js/2.03395e0c.chunk.js",
+    "static/js/2.fcbed09d.chunk.js",
     "static/css/main.8d3fe20a.chunk.css",
-    "static/js/main.731d46d3.chunk.js"
+    "static/js/main.dcc948f7.chunk.js"
   ]
 }
