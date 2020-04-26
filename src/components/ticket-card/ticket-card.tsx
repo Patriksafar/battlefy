@@ -9,7 +9,6 @@ import {
   Button,
   makeStyles,
   Grid,
-  Chip,
   createMuiTheme,
 } from "@material-ui/core";
 import * as classes from "./ticket-card.styles";
@@ -27,9 +26,6 @@ const useStyles = makeStyles({
     [theme.breakpoints.up("md")]: {
       maxWidth: "25%",
     },
-  },
-  chip: {
-    padding: "4px",
   },
   title: {
     fontWeight: 800,
