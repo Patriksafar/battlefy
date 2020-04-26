@@ -2,7 +2,7 @@
   "name": "gamesky",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://patriksafar.github.io/battlefy",
+  "homepage": "http://patriksafar.github.io/battlefy/",
   "dependencies": {
     "@material-ui/core": "^4.9.11",
     "@material-ui/icons": "^4.9.1",
