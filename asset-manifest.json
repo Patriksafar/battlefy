@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/battlefy/static/css/main.8d3fe20a.chunk.css",
+    "main.js": "/battlefy/static/js/main.d66aafae.chunk.js",
+    "main.js.map": "/battlefy/static/js/main.d66aafae.chunk.js.map",
+    "runtime-main.js": "/battlefy/static/js/runtime-main.d85187ac.js",
+    "runtime-main.js.map": "/battlefy/static/js/runtime-main.d85187ac.js.map",
+    "static/js/2.8886bc70.chunk.js": "/battlefy/static/js/2.8886bc70.chunk.js",
+    "static/js/2.8886bc70.chunk.js.map": "/battlefy/static/js/2.8886bc70.chunk.js.map",
+    "index.html": "/battlefy/index.html",
+    "precache-manifest.1baf27aff3a81e4e89631dd8ce15b86f.js": "/battlefy/precache-manifest.1baf27aff3a81e4e89631dd8ce15b86f.js",
+    "service-worker.js": "/battlefy/service-worker.js",
+    "static/css/main.8d3fe20a.chunk.css.map": "/battlefy/static/css/main.8d3fe20a.chunk.css.map",
+    "static/js/2.8886bc70.chunk.js.LICENSE.txt": "/battlefy/static/js/2.8886bc70.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d85187ac.js",
+    "static/js/2.8886bc70.chunk.js",
+    "static/css/main.8d3fe20a.chunk.css",
+    "static/js/main.d66aafae.chunk.js"
+  ]
+}
