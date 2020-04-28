@@ -10,7 +10,7 @@ import {
   responsiveFontSizes,
 } from "@material-ui/core/styles";
 
-import { red, amber } from "@material-ui/core/colors";
+import { red } from "@material-ui/core/colors";
 import { paths } from "./routes/paths";
 
 let theme = createMuiTheme({
@@ -19,7 +19,7 @@ let theme = createMuiTheme({
       main: red[600],
     },
     secondary: {
-      main: amber["400"],
+      main: "#4025af",
     },
   },
   typography: {

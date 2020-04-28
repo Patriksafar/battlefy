@@ -17,6 +17,9 @@ const useStyles = makeStyles({
     flexDirection: "column",
     justifyContent: "center",
   },
+  subtitle: {
+    marginBottom: "16px",
+  },
 });
 
 export const Header = ({ title, image, children, subtitle }: Props) => {
@@ -35,7 +38,7 @@ export const Header = ({ title, image, children, subtitle }: Props) => {
             {title}
           </Typography>
           {subtitle && (
-            <Typography variant="body1" gutterBottom>
+            <Typography variant="body1" className={classesOver.subtitle}>
               {subtitle}
             </Typography>
           )}
