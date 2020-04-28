@@ -15,9 +15,6 @@ const useStyles = makeStyles({
   container: {
     paddingTop: 40,
   },
-  mainContainer: {
-    maxWidth: 960,
-  },
 });
 
 type Props = RouteComponentProps;
@@ -54,21 +51,17 @@ export const Homepage = ({}: Props) => {
         </div>
       </Header>
       <Container className={classes.container}>
-        <Grid item className={classes.mainContainer}>
-          {/* <Container> */}
-          <Typography variant="h5" gutterBottom>
-            Nadcházející turnaje
-          </Typography>
-          <Grid container spacing={3}>
-            {tournaments.map((item) => (
-              <TicketCard
-                title={item.title}
-                gameTag={item.game}
-                key={item.title}
-              />
-            ))}
-          </Grid>
-          {/* </Container> */}
+        <Typography variant="h5" gutterBottom>
+          Nadcházející turnaje
+        </Typography>
+        <Grid container spacing={3}>
+          {tournaments.map((item) => (
+            <TicketCard
+              title={item.title}
+              gameTag={item.game}
+              key={item.title}
+            />
+          ))}
         </Grid>
       </Container>
     </div>
