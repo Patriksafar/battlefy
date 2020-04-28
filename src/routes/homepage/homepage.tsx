@@ -10,11 +10,13 @@ import {
 import { Header } from "../../components/header";
 import { paths } from "../paths";
 import { TicketCard } from "../../components/ticket-card";
-import EventIcon from "@material-ui/icons/Event";
 
 const useStyles = makeStyles({
   container: {
-    paddingTop: "48px",
+    paddingTop: 40,
+  },
+  mainContainer: {
+    maxWidth: 960,
   },
 });
 
@@ -46,24 +48,27 @@ export const Homepage = ({}: Props) => {
               navigate(paths.login);
             }}
             size="large"
-            startIcon={<EventIcon />}
           >
             Nadcházející událost
           </Button>
         </div>
       </Header>
       <Container className={classes.container}>
-        <Typography variant="h5" gutterBottom>
-          Nadcházející turnaje
-        </Typography>
-        <Grid container spacing={3}>
-          {tournaments.map((item) => (
-            <TicketCard
-              title={item.title}
-              gameTag={item.game}
-              key={item.title}
-            />
-          ))}
+        <Grid item className={classes.mainContainer}>
+          {/* <Container> */}
+          <Typography variant="h5" gutterBottom>
+            Nadcházející turnaje
+          </Typography>
+          <Grid container spacing={3}>
+            {tournaments.map((item) => (
+              <TicketCard
+                title={item.title}
+                gameTag={item.game}
+                key={item.title}
+              />
+            ))}
+          </Grid>
+          {/* </Container> */}
         </Grid>
       </Container>
     </div>

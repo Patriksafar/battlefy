@@ -12,6 +12,7 @@ import {
 
 import { red } from "@material-ui/core/colors";
 import { paths } from "./routes/paths";
+import { TournamentDetail } from "./routes/tournament-detail";
 
 let theme = createMuiTheme({
   palette: {
@@ -41,15 +42,14 @@ let theme = createMuiTheme({
 theme = responsiveFontSizes(theme);
 
 export const App = () => {
-  const basepath = window.location.host + window.location.pathname
-  
   return (
     <ThemeProvider theme={theme}>
       <Navigation />
-      <Router basepath={basepath}>
+      <Router>
         <Login path={paths.login} />
         <Register path={paths.register} />
         <Homepage default path={paths.index} />
+        <TournamentDetail path={paths.tournamentDetail} />
         <Profile path={paths.profile} />
       </Router>
     </ThemeProvider>
