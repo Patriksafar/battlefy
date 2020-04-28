@@ -35,7 +35,7 @@ export const Navigation = () => {
             </Link>
           </MenuItem>
           <MenuItem>
-            <Link to={paths.tournament} color="inherit">
+            <Link to={paths.tournamentDetail} color="inherit">
               Turnaje
             </Link>
           </MenuItem>
