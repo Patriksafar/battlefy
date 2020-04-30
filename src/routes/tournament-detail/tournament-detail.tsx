@@ -73,6 +73,10 @@ export const TournamentDetail = ({ tournamentId }: Props) => {
             Some description gonna be here, which will says you already lost. So
             you should not join this tournament at all.
           </Typography>
+          <Typography variant="body2" className={classes.paddingTypo}>
+            By joining this tournament you automaticaly agree with rules of this
+            tournament. For more see tab Rules
+          </Typography>
           {joined ? (
             <Button
               color="secondary"
@@ -107,6 +111,12 @@ export const TournamentDetail = ({ tournamentId }: Props) => {
             <Tab label="Rules" />
           </Tabs>
           <TabPanel value={value} index={0}>
+            <div>
+              <Typography variant="caption">Players registered:</Typography>
+              <Typography variant="body1" gutterBottom>
+                99 / 100
+              </Typography>
+            </div>
             <div>
               <Typography variant="caption">Game:</Typography>
               <Typography variant="body1" gutterBottom>
