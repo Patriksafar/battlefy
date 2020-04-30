@@ -64,7 +64,7 @@ export const TicketCard = ({ title, gameTag }: Props) => {
 
               <Typography
                 gutterBottom
-                variant="h6"
+                variant="subtitle1"
                 component="h2"
                 className={overideClasses.title}
               >

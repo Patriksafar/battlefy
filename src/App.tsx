@@ -2,7 +2,6 @@ import React from "react";
 import { Homepage } from "./routes/homepage";
 import { Router } from "@reach/router";
 import { Profile } from "./routes/profile";
-import { Login, Register } from "./routes/auth";
 import { Navigation } from "./components";
 import {
   ThemeProvider,
@@ -13,6 +12,7 @@ import {
 import { red } from "@material-ui/core/colors";
 import { paths } from "./routes/paths";
 import { TournamentDetail } from "./routes/tournament-detail";
+import { Tournaments } from "./routes/tournaments";
 
 let theme = createMuiTheme({
   palette: {
@@ -46,12 +46,12 @@ export const App = () => {
     <ThemeProvider theme={theme}>
       <Navigation />
       <Router>
-        <Login path={paths.login} />
-        <Register path={paths.register} />
         <Homepage default path={paths.index} />
+        <Tournaments path={paths.tournaments} />
         <TournamentDetail path={paths.tournamentDetail} />
         <Profile path={paths.profile} />
       </Router>
+      <div>Footer</div>
     </ThemeProvider>
   );
 };

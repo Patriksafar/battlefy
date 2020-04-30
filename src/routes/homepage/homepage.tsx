@@ -1,19 +1,18 @@
 import React from "react";
-import { RouteComponentProps, navigate } from "@reach/router";
-import {
-  Typography,
-  Button,
-  Container,
-  Grid,
-  makeStyles,
-} from "@material-ui/core";
-import { Header } from "../../components/header";
+import { RouteComponentProps, Link } from "@reach/router";
+import { Typography, Button, Grid, makeStyles } from "@material-ui/core";
 import { paths } from "../paths";
 import { TicketCard } from "../../components/ticket-card";
+import { MainHeader } from "./main-header";
+import { Layout } from "../../components/layout";
 
 const useStyles = makeStyles({
   container: {
     paddingTop: 40,
+    paddingBottom: 40,
+  },
+  tournamentListHeader: {
+    marginBottom: 8,
   },
 });
 
@@ -28,32 +27,31 @@ export const Homepage = ({}: Props) => {
     { title: "FortniteNight 3", game: "Fortnite" },
     { title: "FortniteNight 4", game: "Fortnite" },
     { title: "FortniteNight 5", game: "Fortnite" },
+    { title: "FortniteNight 6", game: "Fortnite" },
+    { title: "FortniteNight 7", game: "Fortnite" },
+    { title: "FortniteNight 8", game: "Fortnite" },
   ];
 
   return (
     <div>
-      <Header
-        title="Přídej se k nám a hraj o prizemoney!"
-        subtitle="Každý týden pořádáme turnaj ve hře Fortnite! Připoj se, bude to stát za to."
-        image="https://cdn2.unrealengine.com/Diesel%2Fproductv2%2Ffortnite%2Fhome%2F12BR_EGS_Launcher_G-1360x766-ffb22909a731497584be4a01d18a17a15b245923.jpg?h=1080&resize=1&w=1920"
-      >
-        <div>
-          <Button
-            variant="contained"
-            color="secondary"
-            onClick={() => {
-              navigate(paths.login);
-            }}
-            size="large"
-          >
-            Nadcházející událost
-          </Button>
-        </div>
-      </Header>
-      <Container className={classes.container}>
-        <Typography variant="h5" gutterBottom>
-          Nadcházející turnaje
-        </Typography>
+      <MainHeader />
+      <Layout>
+        <Grid
+          container
+          justify="space-between"
+          className={classes.tournamentListHeader}
+        >
+          <Grid item>
+            <Typography variant="h5" gutterBottom>
+              Upcoming events
+            </Typography>
+          </Grid>
+          <Grid item>
+            <Button color="primary">
+              <Link to={paths.tournamentDetail}>Show more events</Link>
+            </Button>
+          </Grid>
+        </Grid>
         <Grid container spacing={3}>
           {tournaments.map((item) => (
             <TicketCard
@@ -63,7 +61,7 @@ export const Homepage = ({}: Props) => {
             />
           ))}
         </Grid>
-      </Container>
+      </Layout>
     </div>
   );
 };
